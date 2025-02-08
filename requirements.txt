@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+alembic
+asyncpg
+pydantic
+redis
+aioredis
+celery
+aiohttp
+dotenv
+pytest
+prometheus-client

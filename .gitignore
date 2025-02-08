@@ -1,0 +1,23 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environment
+venv/
+.env
+.env.example
+
+# Ignore logs and temp files
+*.log
+*.sqlite3
+*.db
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# Ignore Docker artifacts
+*.pid
+*.swp
+.dockerignore
