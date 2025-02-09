@@ -116,17 +116,12 @@ celery -A app.workers.celery_worker worker --loglevel=info
 
 ---
 
-## 📜 **License**
-
-This project is licensed under the **MIT License**.
-
----
 
 ### ✨ **Contributions & Feedback**
 
 Feel free to contribute, suggest improvements, or report issues! 😊\
 📩 **Contact:** [vishalrajmehra96@gmail.com](mailto\:your-email@example.com)\
-💻 **GitHub:** [GitHub Repo](https://github.com/your-repo/content-moderation)
+💻 **GitHub:** [GitHub Repo](https://github.com/vishalraj9102/content-moderation.git)
 
 
 
