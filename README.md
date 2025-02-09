@@ -123,6 +123,20 @@ Feel free to contribute, suggest improvements, or report issues! 😊\
 📩 **Contact:** [vishalrajmehra96@gmail.com](mailto\:your-email@example.com)\
 💻 **GitHub:** [GitHub Repo](https://github.com/vishalraj9102/content-moderation.git)
 
+# 🚀 Content Moderation System  Output
+
+
+## 📸 Output Screenshots  
+### ✅ API Response  
+![API Response](static/ss-1.png) 
+
+![API Response](static/ss-2.png)
+
+### ✅ Moderation Result  
+![Databases](static/ss-3.png)
+
+![Docker_image](static/ss-4.png)
+
 
 
 
