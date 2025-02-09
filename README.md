@@ -120,7 +120,7 @@ celery -A app.workers.celery_worker worker --loglevel=info
 ### ✨ **Contributions & Feedback**
 
 Feel free to contribute, suggest improvements, or report issues! 😊\
-📩 **Contact:** [vishalrajmehra96@gmail.com](mailto\:your-email@example.com)\
+📩 **Contact:** [vishalrajmehra95@gmail.com](mailto\:your-email@example.com)\
 💻 **GitHub:** [GitHub Repo](https://github.com/vishalraj9102/content-moderation.git)
 
 # 🚀 Content Moderation System  Output
