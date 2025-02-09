@@ -6,5 +6,5 @@ app = FastAPI(title="Content Moderation System")
 app.include_router(router)
 
 @app.get("/")
-def health_check():
-    return {"status": "running"}
+def root():
+    return {"message": "Content Moderation API is running!"}

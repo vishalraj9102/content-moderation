@@ -1,39 +1,45 @@
-version: '3.8'
 
 services:
-  web:
+  fastapi_app:
     build: .
     container_name: fastapi_app
+    restart: always
     ports:
       - "8000:8000"
     depends_on:
-      - redis
-      - db
-    environment:
-      - DATABASE_URL=postgresql://postgres:root@db:5432/moderation_db
-      - REDIS_URL=redis://redis:6379/0
+      - redis_cache
+    env_file:
+      - .env
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    volumes:
+      - .:/app
+    networks:
+      - app_network
 
-  db:
-    image: postgres:latest
-    container_name: postgres_db
-    restart: always
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: root
-      POSTGRES_DB: moderation_db
-    ports:
-      - "5432:5432"
-
-  redis:
+  redis_cache:
     image: redis:latest
     container_name: redis_cache
+    restart: always
     ports:
       - "6379:6379"
+    networks:
+      - app_network
 
-  worker:
+  celery_worker:
     build: .
     container_name: celery_worker
-    command: celery -A app.workers.celery_worker worker --loglevel=info
+    restart: always
     depends_on:
-      - redis
-      - db
+      - redis_cache
+    env_file:
+      - .env
+    command:  ["celery", "-A", "app.workers.celery_worker", "worker", "--loglevel=info"]
+
+    volumes:
+      - .:/app
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

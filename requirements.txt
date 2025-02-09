@@ -8,6 +8,10 @@ redis
 aioredis
 celery
 aiohttp
-dotenv
+python-dotenv
 pytest
 prometheus-client
+psycopg2-binary
+python-multipart
+openai==1.2.3
+
